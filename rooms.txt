@@ -1,0 +1,6 @@
+2500:12:Lecture Room
+2502:51:Exam Hall
+2504:32:Main Hall
+2505:23:Design Studio
+2506:25:Tutorial Room
+2507:14:Meeting Room
