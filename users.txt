@@ -1,2 +1,2 @@
 10001:Khisrow:123:795538744:khisrow_hashimi@hotmail.com:mem
-10002:Abid:123:793538721:sahashimi.ug@auaf.edu.af:stu
+10002:Abid:123:793538721:sample@sample.com:stu
