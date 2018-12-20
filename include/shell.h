@@ -3,8 +3,6 @@
 
 class shell {
 
-    bool isExit;
-
     enum class modes { loggedOut, loggedIn };
 
     std::string mainCommand;

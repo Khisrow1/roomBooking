@@ -142,9 +142,7 @@ void shell::logout () {
 
 void shell::signUp () {
 
-    if (user.currentPrivilege==users::accountType::member ||
-	user.currentPrivilege==users::accountType::student ||
-	user.currentPrivilege==users::accountType::none) {
+    if (user.currentPrivilege!=users::accountType::administrator) {
 
 	std::cout<<"\nYou do not have the privileges\n\n";
 	return;
@@ -157,9 +155,7 @@ void shell::updateMember (int id) {
 
     int ID;
 
-    if (user.currentPrivilege==users::accountType::member ||
-	user.currentPrivilege==users::accountType::student ||
-	user.currentPrivilege==users::accountType::none) {
+    if (user.currentPrivilege!=users::accountType::administrator) {
 
 	std::cout<<"\nYou do not have the privileges\n\n";
 	return;
@@ -177,9 +173,7 @@ void shell::updateMember (int id) {
 
 void shell::deleteMember (int id) {
 
-    if (user.currentPrivilege==users::accountType::member ||
-	user.currentPrivilege==users::accountType::student ||
-	user.currentPrivilege==users::accountType::none) {
+    if (user.currentPrivilege!=users::accountType::administrator) {
 
 	std::cout<<"\nYou do not have the privileges\n\n";
 	return;
@@ -213,7 +207,7 @@ void shell::deleteMember (int id) {
 
 void shell::displayMembers () {
 
-    if (!(user.currentPrivilege==users::accountType::administrator)) {
+    if (user.currentPrivilege!=users::accountType::administrator) {
 
 	std::cout<<"\nYou do not have the privileges\n\n";
 	return;
@@ -228,7 +222,7 @@ void shell::help () {
 
     if (user.currentPrivilege==users::accountType::none) {
 
-	std::cout<<"\nYou do not have the privileges, you have to log in first\n\n";
+	std::cout<<"\nYou do not have the privileges, you have to login first\n\n";
 	return;
     }
     std::cout<<std::endl<<"    List of commands ---\n"<<std::endl;
